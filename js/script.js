@@ -1,4 +1,5 @@
-pellentesque urna at, varius libero</p>
+<h3>Iron Man</h3>
+                                    <p>Morbi eu orci posuere, pellentesque urna at, varius libero</p>
                                 </div>
                                 <div class="button_block">
                                     <button name="buy_item">Купить</button>
@@ -50,7 +51,7 @@ pellentesque urna at, varius libero</p>
         </main>
     </div>
 
-    
+    <!-- Важно: перед подключением вашего script.js нужно подключить библиотеку Telegram -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="js/script.js"></script>
 </body>
