@@ -1,33 +1,57 @@
-let tg = window.Telegram.WebApp;
+pellentesque urna at, varius libero</p>
+                                </div>
+                                <div class="button_block">
+                                    <button name="buy_item">Купить</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="reg_form">
+                <div class="_container">
+                    <div class="reg_form_inner">
+                        <h2><label for="userFullName">Подписка</label></h2>
+                        <article>
+                            <form action="#" method="post">
+                                <div class="form-places">
+                                    <div class="user-name_place">
+                                        <label>
+                                            <span class="label_place">ФИО</span>
+                                            <!-- ✅ Поле с name="user_full_name" присутствует -->
+                                            <input type="text" name="user_full_name" id="userFullName">
+                                        </label>
+                                    </div>
+                                    <div class="user-email_place">
+                                        <label>
+                                            <span class="label_place">Почта</span>
+                                            <!-- ✅ Поле с name="user_email" присутствует -->
+                                            <input type="text" name="user_email" id="userEmail">
+                                        </label>
+                                    </div>
+                                    <div class="user-tel_place">
+                                        <label>
+                                            <span class="label_place">Телефон</span>
+                                            <!-- ✅ Поле с name="user_tel" присутствует -->
+                                            <input type="text" name="user_tel" id="userTel">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-buttons">
+                                    <!-- ✅ Кнопка с name="send_reg" присутствует -->
+                                    <input type="button" name="send_reg" value="Отправить">
+                                    <input type="reset" name="clear_reg" value="Очистить">
+                                </div>
+                            </form>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 
-let send_reg = document.querySelector('[name="send_reg"]'),
-    buy_item = document.querySelectorAll('[name="buy_item"]'); // создаем переменную с информацией обо всех кнопках Купить
-
-send_reg.addEventListener('click', () => {
-    let user_name = document.querySelector('[name="user_full_name"]').value,
-        user_email = document.querySelector('[name="user_email"]').value,
-        user_tel = document.querySelector('[name="user_tel"]').value;
-
-    let user_data = {
-        data_type: 'user_sub',
-        data_name: user_name,
-        data_email: user_email,
-        data_tel: user_tel
-    }
-    tg.sendData(JSON.stringify(user_data));
-    tg.close();
-})
-
-buy_item.forEach(item => { // перебираем все кнопки Купить
-    item.addEventListener('click', () => { // перехватываем событие нажатия на любую кнопку Купить
-        let button_block_info = item.parentNode; // создаем переменную с информацией о блоке, в которой находится любая кнопка Купить
-        let article_name = button_block_info.parentNode.getAttribute('name'); // создаем переменную с названием карточки товара
-        
-        let article_data = { // создаем объект с передаваемой информацией
-            data_type: 'buy_item', // вид/обозначение передаваемой информации
-            data_name: article_name // название товара
-        }
-        tg.sendData(JSON.stringify(article_data));
-        tg.close();
-    })
-})
+    
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
