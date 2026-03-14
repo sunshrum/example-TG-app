@@ -1,0 +1,39 @@
+// Palette
+
+$base_color: #090520;
+$accent_color: #FC1414;
+$mindaro_color: #F5FC90;
+$ivory_color: #FBFCEE;
+
+// Spaces
+
+$inline_space: 8px;
+$inarticle_space: 12px;
+$insection_space: 28px;
+$between-section_space: 80px;
+
+// Border
+
+$light-width_border: 2px;
+$strong-width_border: 4px;
+$radius: 4px;
+
+// Text sizes
+
+$main-heading_size: 52px;
+$heading_size: 32px;
+$global-text_size: 16px;
+$intable-text_size: 12px;
+
+// Text fonts 
+
+$main_font: 'Roboto', sans-serif;
+
+// Global header
+
+$logotype_height: 40px;
+
+// Content container
+
+$content-container_max-width: 1280px;
+$content-container_margin: $insection_space;

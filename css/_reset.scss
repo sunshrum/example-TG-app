@@ -1,0 +1,33 @@
+// Zeroing
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a::before, a::after {
+    text-decoration: none;
+    color: inherit;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+}

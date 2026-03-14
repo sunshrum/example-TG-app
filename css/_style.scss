@@ -1,0 +1,116 @@
+@use 'sass:math';
+
+@import 'reset';
+@import 'fonts';
+@import 'variables';
+
+// Global styles
+
+// *::selection {
+//     color: $base_color;
+//     background-color: $light-coral_color;
+// }
+
+html, body {
+    line-height: 1.5;
+    color: $ivory_color;
+    font-family: $main_font;
+    font-size: clamp(12px, 5vw, $global-text_size);
+    font-weight: 400;
+    font-style: normal;
+    background-color: $base_color;
+}
+
+._wrapper {
+    min-height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+section {
+    margin-bottom: $between-section_space;
+}
+
+._container {
+    max-width: $content-container_max-width;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 $content-container_margin;
+    box-sizing: content-box;
+}
+
+[class$='_inner'] {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: $insection_space;
+    box-sizing: border-box;
+}
+
+.img_container {
+    overflow: hidden;
+
+    > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+h1 {
+    font-size: clamp(28px, 5vw, $main-heading_size);
+    font-weight: 600;
+}
+
+h2:not(.logotype) {
+    margin-bottom: $insection_space;
+    font-size: clamp(20px, 5vw, $heading_size);
+    font-weight: 600;
+}
+
+input[type='text'] {
+    padding: $inline_space;
+    border: $light-width_border solid $ivory_color;
+    border-radius: $radius;
+    font-family: 'Roboto',sans-serif;
+    color: $base_color;
+    font-size: $global-text_size;
+    background-color: $ivory_color;
+    outline: none;
+}
+
+button, input[type='button'], input[type='reset'] {
+    padding: $global-text_size $global-text_size * 2;
+    border: $strong-width_border solid $accent_color;
+    border-radius: $radius;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: $ivory_color;
+    background-color: $accent_color;
+    transition: all .4s;
+} 
+
+input[type='reset'] {
+    border-color: $ivory_color;
+    color: $base_color;
+    background-color: $ivory_color;
+}
+
+button:hover, input[type='button']:hover, input[type='reset']:hover {
+    border-color: $mindaro_color;
+    background-color: $mindaro_color;
+    color: $base_color;
+    cursor: pointer;
+}
+
+button:active, input[type='button']:active, input[type='reset']:active {
+    border-color: #7d8334;
+    background-color: #7d8334;
+    color: $ivory_color;
+}
